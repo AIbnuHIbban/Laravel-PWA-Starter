@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +14,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//offline
+Route::get('offline', function () {
+    return view('modules.laravelpwa.offline');
+});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
